@@ -1,0 +1,21 @@
+{
+  "listen": "127.0.0.1:8080",
+  "admin_listen": "127.0.0.1:9090",
+
+  "users": [
+    { "name": "alice", "password": "change-me", "max_conns": 100 },
+    { "name": "bob",   "password": "change-me-too", "max_conns": 10 }
+  ],
+
+  "exits": [
+    { "ip": "127.0.0.2", "country": "de" },
+    { "ip": "127.0.0.3", "country": "de" },
+    { "ip": "127.0.0.4", "country": "us" }
+  ],
+
+  "allow_private_targets": true,
+
+  "timeouts": { "handshake": "10s", "dial": "10s", "idle": "5m" },
+  "health":   { "target": "", "interval": "15s", "timeout": "3s" },
+  "session_ttl": "10m"
+}
